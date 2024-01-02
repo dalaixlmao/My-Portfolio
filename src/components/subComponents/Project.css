@@ -1,0 +1,78 @@
+.project-box {
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+  min-width: 42.1875rem;
+  width: 42.1875rem;
+  padding: 2rem;
+  border-radius: 0.625rem;
+  border: 2px solid #8a00d7;
+  background: rgba(255, 255, 255, 0);
+  margin-left: 2rem;
+}
+
+.project-box:hover {
+  border-radius: 0.625rem;
+  border: 2px solid #8a00d7;
+  background: #8a00d7;
+  box-shadow: inset 4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  .project-heading{
+    color: white;
+  }
+  .project-body{
+    color: rgba(255, 255, 255, 0.50);
+  }
+  .link-class {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.link-class:hover{
+    scale: 0.8;
+    cursor: pointer;
+}
+
+.left-one {
+  display: flex;
+  flex-direction: row;
+}
+.project-icon-pic {
+  width: 6.5625rem;
+  height: 6.5625rem;
+  border-radius: 50%;
+}
+.right-one {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.right-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.project-heading {
+  color: #8a00d7;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.link-icon {
+  display: flex;
+  flex-direction: row;
+  color: #8a00d7;
+}
+.link-class {
+  fill: #8a00d7;
+}
+.project-body {
+  margin-top: 1rem;
+  color: rgba(138, 0, 215, 0.5);
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

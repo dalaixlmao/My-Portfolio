@@ -1,0 +1,51 @@
+.Landing {
+  margin-top: 5rem;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+me {
+  width: 100%;
+  height: 100%;
+  transition: background-color 0s linear;
+}
+
+.me.transparent-bg {
+  background-color: rgba(255, 255, 255, 0); /* Adjust the transparency as needed */
+}
+
+.intro {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 70vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  font-weight: 500;
+  color: #7b2bbe;
+  text-align: center;
+  font-family: Poppins;
+  line-height: normal;
+  align-content: center;
+}
+
+.line1 {
+  font-size: 4rem;
+}
+
+.line2 {
+  font-size: 4rem;
+}
+
+.centerContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

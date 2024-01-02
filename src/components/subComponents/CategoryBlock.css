@@ -1,0 +1,27 @@
+.categoryBlock {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.componentBox {
+  width: 80%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  box-shadow: inset 4px 4px 10px rgba(123, 43, 190, 0.5);
+  background: #e0aafe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.component{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
