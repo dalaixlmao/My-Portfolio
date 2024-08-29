@@ -1,10 +1,10 @@
 export default function About() {
   return (
-    <div className="text-xs text-white/50 transition-all hover:bg-white/10 hover:border-white/10 px-6 py-4 rounded-2xl border border-white/30 shadow-inner leading-relaxed">
+    <div className="text-xs text-white/50 transition-all py-4 rounded-2xl shadow-inner leading-relaxed">
       <div className="text-base font-semibold text-white">
         Background and education
       </div>
-      <p className="mt-1 text-justify border-b-2 pb-2 border-white/10">
+      <p className="mt-1 border-b-2 pb-2 border-white/10">
         I&apos;m a full-stack developer who graduated from{" "}
         <a className="font-semibold text-white/70">Indian Institute of Technology, Roorkee (IITR)</a>,
         with a B.Tech degree in Mechanical Engineering in 2024. My academic journey
@@ -17,7 +17,7 @@ export default function About() {
       <div className="text-base font-semibold  text-white mt-2">
         My technical and creative side
       </div>
-      <p className="mt-1 text-justify border-b-2 pb-2 border-white/10">
+      <p className="mt-1 border-b-2 pb-2 border-white/10">
         My technical expertise spans a range of modern technologies, including
         Next.js, React.js, Node.js, and TypeScript. I specialize in crafting
         scalable web applications and am proficient in using Prisma ORM for
@@ -30,7 +30,7 @@ export default function About() {
         algorithms and data structures.
       </p>
       <div className="text-base font-semibold text-white mt-2">Goals</div>
-      <p className="mt-1 text-justify">
+      <p className="mt-1">
         I am continually eager to explore new technologies and push the
         boundaries of what&apos;s possible. My creative pursuits and technical
         skills fuel my enthusiasm for developing innovative solutions. I am

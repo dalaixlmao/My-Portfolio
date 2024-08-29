@@ -1,9 +1,11 @@
 import Skill from "./Skill";
+import { useRouter } from "next/navigation";
 
 export default function Project({title, description, link, skill, posterLink}:{title:string, description:string, link:string[], skill:string[], posterLink:string}) {
 
+  const router = useRouter();
   return (
-    <div className="w-full flex flex-row mt-4 text-sm text-white/50 cursor-pointer hover:bg-white/10 hover:border-white/10 transition-all px-6 py-4 rounded-2xl border border-white/30 shadow-inner leading-relaxed">
+    <div onClick={()=>{router.push(link[0])}} className="w-full flex flex-row mt-4 text-sm text-white/50 cursor-pointer hover:bg-white/10 hover:border-white/10 transition-all px-6 py-4 rounded-2xl border border-white/30 shadow-inner leading-relaxed">
       <div
         className="w-24 h-12 flex flex-col items-start mt-2 rounded-md bg-white border border-slate-400"
         style={{

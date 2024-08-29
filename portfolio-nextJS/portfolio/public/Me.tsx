@@ -18,10 +18,11 @@ export default function Me() {
     //   }`}
     // />
 
-    <div style={{ position: 'relative', width: '100%', height: '450px' }}>
+    <div style={{ position: 'relative', width: '100%', height: '450px', display:"flex", flexDirection:"row", alignItems:"start" }}>
       <Image
         src="/Me.svg"
         alt="Description of image"
+        color="blue"
         layout="fill" // Makes the image cover the container
       />
     </div>

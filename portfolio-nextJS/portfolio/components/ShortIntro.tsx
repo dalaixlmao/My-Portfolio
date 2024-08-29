@@ -8,13 +8,13 @@ export default function ShortIntro() {
     })
   const router = useRouter();
   return (
-    <div className="text-white flex flex-col">
-      <div className="md:text-6xl font-bold z-10">Anubhav Aaryan</div>
-      <div className={`h-1 md:h-3 mt-[-15px] md:mt-[-30px] bg-gradient-to-r from-pink-500/50 to-violet-500/50 transition-transform duration-1000 ${
+    <div className="text-white flex flex-col mt-[-100px] md:mt-0">
+      <div className="md:text-3xl lg:text-6xl font-bold z-10">Anubhav Aaryan</div>
+      <div className={`h-1 h-[8px] lg:h-3 mt-[-15px] md:mt-[-20px] lg:mt-[-30px] bg-gradient-to-r from-pink-500/50 to-violet-500/50 transition-transform duration-1000 ${
           fadeIn ? "transform translate-x-0" : "-translate-x-full"
         }`}></div>
       <div className="text-2xl font-medium mt-4">Software Developer</div>
-      <div className="text-white/50 mt-4 w-full md:w-1/2 text-sm font-light">
+      <div className="text-white/50 mt-4 w-full lg:w-1/2 text-sm font-light">
         I am an innovative full-stack developer and recent IIT Roorkee graduate
         with a strong foundation in competitive programming, holding an Expert
         rating on Codeforces (1620) and a Knight rating on Leetcode (1865).

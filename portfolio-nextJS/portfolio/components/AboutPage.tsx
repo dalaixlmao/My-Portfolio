@@ -3,6 +3,8 @@ import NavButton from "./NavButton";
 import Me from "@/public/Me";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { MutableRefObject } from "react";
+import { RefObject } from "react";
 
 export default function AboutPage() {
     const [fadeIn, setFadeIn] = useState(false);
@@ -12,13 +14,13 @@ export default function AboutPage() {
         setFadeIn(true);
     },[])
   return (
-    <div className={`md:px-0 pb-5 px-2 h-screen text-white flex flex-col items-center duration-1000 ease-in-out ${
+    <div className={`lg:px-0 pb-5 px-2 h-screen text-white flex flex-col items-center duration-1000 ease-in-out ${
         fadeIn ? "opacity-100" : "opacity-0"
       }`}>
       <div className={`w-full md:w-3/4 h-4/5 pt-24 flex flex-col justify-center`}>
-        <div className={`flex flex-col-reverse md:flex-row justify-center w-full transition-transform`}>
+        <div className={`flex flex-col-reverse lg:flex-row lg:items-start justify-center w-full transition-transform`}>
           <ShortIntro />
-          <div className={`md:mb-0 w-full flex flex-col items-end px-12 md:px-0 md:mt-0 mt-24`}>
+          <div className={`lg:mb-0 w-full flex flex-col items-end px-12 lg:px-0 lg:mt-0 md:mt-24`}>
             <Me />
           </div>
         </div>
