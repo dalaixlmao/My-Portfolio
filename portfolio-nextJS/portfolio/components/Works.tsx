@@ -64,7 +64,7 @@ export default function Work() {
     <div className="flex flex-col w-full items-center justify-center text-white">
       <About />
       <Experience />
-      <div className="mt-[140px]">
+      <div className="mt-[140px] flex flex-col items-center">
         {projects.map((e, index) => {
           return (
             <Project

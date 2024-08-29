@@ -5,7 +5,7 @@ export default function Project({title, description, link, skill, posterLink}:{t
 
   const router = useRouter();
   return (
-    <div onClick={()=>{router.push(link[0])}} className="w-full flex flex-row mt-4 text-sm text-white/50 cursor-pointer hover:bg-white/10 hover:border-white/10 transition-all px-6 py-4 rounded-2xl border border-white/30 shadow-inner leading-relaxed">
+    <div onClick={()=>{router.push(link[0])}} className="w-full flex flex-col md:items-start items-center md:flex-row mt-4 text-sm text-white/50 cursor-pointer hover:bg-white/10 hover:border-white/10 transition-all md:px-6 px-2 py-4 rounded-2xl border border-white/30 shadow-inner leading-relaxed">
       <div
         className="w-24 h-12 flex flex-col items-start mt-2 rounded-md bg-white border border-slate-400"
         style={{
@@ -16,7 +16,7 @@ export default function Project({title, description, link, skill, posterLink}:{t
           backgroundRepeat: "no-repeat",
         }}
       ></div>
-      <div className="ml-6 w-full">
+      <div className="ml-6 md:mt-0 mt-4 w-full flex flex-col">
         <div className="text-lg font-medium text-white flex flex-row items-center">
           <div>{title}</div>
           <TopRight />
@@ -26,8 +26,8 @@ export default function Project({title, description, link, skill, posterLink}:{t
         </div>
         <div className="flex flex-row flex-wrap">
           {" "}
-          {skill.map((e) => {
-            return <Skill text={e} />;
+          {skill.map((e, index) => {
+            return <Skill key={index} text={e} />;
           })}
         </div>
       </div>
@@ -43,7 +43,7 @@ function TopRight() {
       viewBox="0 0 24 24"
       strokeWidth={2}
       stroke="currentColor"
-      className="ml-2 size-3"
+      className="ml-2 size-3 md:block hidden"
     >
       <path
         strokeLinecap="round"
