@@ -14,14 +14,14 @@ export default function Experience() {
 
   return (
     <div className="w-full flex flex-col md:items-start items-center md:flex-row mt-[140px] transition-all text-sm text-white/50 hover:bg-white/10 hover:border-white/10 pmd:x-6 py-4 rounded-2xl border border-white/30 shadow-inner leading-relaxed">
-      <div className="w-1/2 md:w-1/5 flex flex-row md:flex-col items-start">
-        <div className="w-full flex flex-row items-center justify-between">
+      <div className="w-1/2 md:w-1/5 flex flex-row md:flex-col items-start pl-3">
+        <div className=" flex flex-row items-center">
           <div>May</div>
-          <div className="w-3 h-[1px] bg-white/50 mx-1"></div> <div>Nov</div>
+          <div className="w-3 h-[1px] bg-white/50 mx-1"></div> <div>Nov,</div>
         </div>
         <div className="md:ml-0 ml-2">2023</div>
       </div>
-      <div className="ml-6">
+      <div className="ml-6 md:w-4/5 w-full">
         <div className="text-lg font-medium text-white flex md:flex-row flex-col md:items-center">
           <div>Full Stack Developer</div>
           <div className="md:block hidden h-1 w-1 bg-white rounded-full ml-2"></div>
