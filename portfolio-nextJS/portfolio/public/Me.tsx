@@ -18,7 +18,7 @@ export default function Me() {
     //   }`}
     // />
 
-    <div style={{ position: 'relative', width: '100%', height: '450px', display:"flex", flexDirection:"row", alignItems:"start" }}>
+    <div style={{ position: 'relative', width: '100%', height: '450px', display:"flex", flexDirection:"row", alignItems:"start" }} className="md:px-0 m-6">
       <Image
         src="/Me.svg"
         alt="Description of image"

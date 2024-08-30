@@ -10,7 +10,7 @@ export default function ShortIntro() {
   return (
     <div className="text-white flex flex-col md:mt-0">
       <div className="text-sm mb-5 text-violet-400">Hi, my name is</div>
-      <div className="md:text-3xl lg:text-6xl font-bold z-10">
+      <div className="text-3xl lg:text-6xl font-bold z-10">
         Anubhav Aaryan
       </div>
       <div
@@ -18,7 +18,7 @@ export default function ShortIntro() {
           fadeIn ? "transform translate-x-0" : "-translate-x-full"
         }`}
       ></div>
-      <div className="text-2xl font-medium mt-4">Software Developer</div>
+      <div className="md:text-2xl text-xl font-medium mt-4">Software Developer</div>
       <div className="text-white/50 mt-4 w-full lg:w-1/2 text-sm font-light">
         I am an innovative full-stack developer and recent IIT Roorkee graduate
         with a strong foundation in competitive programming, holding an Expert
