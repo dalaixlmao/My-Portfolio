@@ -26,7 +26,7 @@ export default function ShortIntro() {
         <a onClick={()=>{router.push("https://leetcode.com/u/aaryan4nubhav/")}} className="cursor-pointer hover:underline transition-all text-violet-400 font-medium">Leetcode (1865)</a>.
       </div>
       <div className="mt-6 flex flex-row transition-all">
-        <button className="text-violet-400 hover:text-white flex transition-all flex-row items-center hover:border-transparent border border-violet-400 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-400 pl-4 pr-4 py-2 rounded-full">
+        <button onClick={()=>{router.push("mailto:aaryan4nubhav@gmail.com")}} className="text-violet-400 hover:text-white flex transition-all flex-row items-center hover:border-transparent border border-violet-400 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-400 pl-4 pr-4 py-2 rounded-full">
           Say Hello <RightArrow />
         </button>
       </div>

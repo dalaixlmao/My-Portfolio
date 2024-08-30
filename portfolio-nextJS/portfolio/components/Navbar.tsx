@@ -14,12 +14,12 @@ export default function Navbar() {
       <div className="cursor-pointer">
         <Logo />
       </div>
-      <div className="md:hidden transition-all z-30 block w-full flex-col items-end flex">
+      <div className="md:hidden transition-all z-30 block w-full flex-col justify-center items-end flex">
         <div
           onClick={() => {
             setIsOpen(!isOpen);
           }}
-          className=""
+          className="w-6 h-6"
         >
           {!isOpen ? <Menu /> : <Cross />}
         </div>
