@@ -4,7 +4,7 @@ import Me from "@/public/Me";
 export default function About() {
   return (
     <Card>
-      <div className="flex flex-col w-full px-3 mt-80 overflow-y-scroll">
+      <div className="flex flex-col w-full px-3 mt-80">
         <div className="flex flex-row items-center w-full">
           <div className="md:text-2xl text-lg w-2/4 md:w-1/5 font-semibold text-violet-100 text-left">
             About Me
