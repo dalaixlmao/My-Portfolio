@@ -7,7 +7,7 @@ export interface NavProps{
 }
 
 export default function MobileNav({setIsOpen, router}:NavProps){
-    return <div className="h-screen top-0 right-0 bg-black/80 w-screen flex flex-col items-end absolute">
+    return <div className="h-screen top-0 right-0 bg-black/80 w-screen flex flex-col items-end absolute fixed">
     <div className="w-4/5 h-screen flex flex-col bg-slate-900">
       <div
         onClick={() => {
@@ -16,7 +16,7 @@ export default function MobileNav({setIsOpen, router}:NavProps){
         className="w-full flex flex-col items-end p-5"
       ></div>
 
-      <div className="flex text-xs flex-col items-center justify-around h-3/5">
+      <div className="flex text-xs flex-col items-center justify-around h-2/5">
         <NavButtonMobile
           text="About"
           onClick={() => {}}
