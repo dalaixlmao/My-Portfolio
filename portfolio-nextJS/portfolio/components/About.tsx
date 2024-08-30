@@ -1,7 +1,9 @@
 export default function About() {
   return (
     <div className="text-xs text-white/50 transition-all py-4 rounded-2xl shadow-inner leading-relaxed">
-      <div className="text-base font-semibold text-white">
+      
+
+      {/* <div className="text-base font-semibold text-white">
         Background and education
       </div>
       <p className="mt-1 border-b-2 pb-2 border-white/10">
@@ -37,7 +39,7 @@ export default function About() {
         excited to leverage my background and abilities to contribute to
         impactful projects, bringing both technical excellence and a touch of
         creativity to every challenge I encounter.
-      </p>
+      </p> */}
     </div>
   );
 }

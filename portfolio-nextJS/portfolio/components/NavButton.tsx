@@ -1,26 +1,25 @@
-import { useRef } from "react";
+interface NavButtonProps {
+  text: string;
+  onClick: () => void;
+  isActive: boolean;
+}
 
-export default function NavButton({ text }: { text: string }) {
-  const ref = useRef<HTMLDivElement>(null);
+export function NavButtonDesktop({ text, onClick, isActive }: NavButtonProps) {
   return (
     <div
-      className="flex flex-row items-center text-white/30 hover:text-white mb-5 cursor-pointer"
-      onMouseEnter={() => {
-        if (ref.current) {
-          ref.current.style.width = "56px";
-          ref.current.style.opacity = "100%";
-        //   ref.current.style.tra
-        }
-      }}
-      onMouseLeave={() => {
-        if (ref.current) {
-          ref.current.style.width = "28px";
-          ref.current.style.opacity = "30%";
-        }
-      }}
+     className="hidden md:block mr-5 text-violet-100/60 hover:text-violet-200 cursor-pointer"
     >
-      <div className="h-[1px] w-7 hover:w-10 bg-white mr-3 transition-all rounded-full" style={{opacity:0.3}} ref={ref}></div>
-      <div>{text}</div>
+      {text}
+    </div>
+  );
+}
+
+export function NavButtonMobile({ text, onClick, isActive }: NavButtonProps) {
+  return (
+    <div
+     className="md:hidden mt-5 block text-violet-100/60 hover:text-violet-200 cursor-pointer"
+    >
+      {text}
     </div>
   );
 }

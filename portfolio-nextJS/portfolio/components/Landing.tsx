@@ -11,11 +11,10 @@ export default function Landing() {
   }, []);
   return (
     <div
-      className={`w-screen h-screen bg-slate-900 text-white flex flex-col justify-center items-center transition-opacity duration-1000 ease-in-out ${
+      className={` h-screen bg-slate-900 text-white flex flex-col justify-center items-center transition-opacity duration-1000 ease-in-out ${
         fadeIn ? "opacity-100" : "opacity-0"
       }`}
     >
-      <CursorArea />
       <div
         className={`text-xl text-center md:text-5xl lg:text-8xl transition-transform duration-1000 ${
           fadeIn ? "transform translate-x-0" : "-translate-x-full"
@@ -42,27 +41,4 @@ export default function Landing() {
   );
 }
 
-const CursorArea = () => {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const handleMouseMove = (event: any) => {
-      setCursorPosition({ x: event.clientX, y: event.clientY });
-    };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
-  return (
-    <div
-      className="absolute w-[800px] blur-[200px] h-[800px] bg-blue-500/10 rounded-full cursor-default pointer-events-none transition-transform duration-75 ease-linear top-0 left-0"
-      style={{
-        transform: `translate(${cursorPosition.x - 400}px, ${
-          cursorPosition.y - 400
-        }px)`,
-      }}
-    ></div>
-  );
-};
