@@ -56,7 +56,7 @@ export default function Home(): JSX.Element {
   });
 
   return (
-    <div className="w-screen bg-slate-900 h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
+    <div className="w-screen bg-slate-900 h-screen overflow-y-auto md:snap-y md:snap-mandatory scroll-smooth">
       <CursorArea />
       <div className="absolute fixed top-0 z-20"><Navbar /></div>
       <section ref={landingRef} className="z-0 h-screen snap-start">

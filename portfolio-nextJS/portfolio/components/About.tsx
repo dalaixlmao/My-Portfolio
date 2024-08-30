@@ -1,7 +1,35 @@
+import Card from "./Card";
+import Me from "@/public/Me";
+
 export default function About() {
   return (
-    <div className="text-xs text-white/50 transition-all py-4 rounded-2xl shadow-inner leading-relaxed">
-      
+    <Card>
+      <div className="flex flex-col w-full px-3 mt-80 overflow-y-scroll">
+        <div className="flex flex-row items-center w-full">
+          <div className="md:text-2xl text-lg w-2/4 md:w-1/5 font-semibold text-violet-100 text-left">
+            About Me
+          </div>
+          <div className="h-[1px] w-3/4 md:w-4/5 bg-violet-500/30 rounded-full"></div>
+        </div>
+        <div className="w-full flex flex-col md:flex-row">
+          <div className="md:w-3/5 w-full text-xs mt-6 md:mt-12 md:pr-9 wrap text-violet-100/50 font-light leading-relaxed">
+            I&apos;m a full-stack developer who graduated from{" "}
+            <a className="font-semibold text-violet-400">
+              Indian Institute of Technology, Roorkee (IITR)
+            </a>
+            , with a B.Tech degree in Mechanical Engineering in 2024. My
+            academic journey provided me with a robust foundation in analytical
+            thinking and problem-solving, crucial for tackling complex
+            challenges in the tech world. This background, combined with a
+            strong drive for innovation, has shaped my approach to software
+            development, where I blend rigorous engineering principles with
+            creative flair.
+          </div>
+          <div className="md:w-2/5 w-full">
+            <Me />
+          </div>
+        </div>
+      </div>
 
       {/* <div className="text-base font-semibold text-white">
         Background and education
@@ -40,6 +68,6 @@ export default function About() {
         impactful projects, bringing both technical excellence and a touch of
         creativity to every challenge I encounter.
       </p> */}
-    </div>
+    </Card>
   );
 }
