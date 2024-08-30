@@ -14,21 +14,18 @@ export default function Navbar() {
       <div className="cursor-pointer">
         <Logo />
       </div>
-      <div
-        className="md:hidden transition-all z-30 block w-full flex-col items-end flex"
-        onClick={() => {
-          setIsOpen(!isOpen);
-        }}
-      >
-        {!isOpen ? <Menu /> : <Cross />}
+      <div className="md:hidden transition-all z-30 block w-full flex-col items-end flex">
+        <div
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+          className=""
+        >
+          {!isOpen ? <Menu /> : <Cross />}
+        </div>
       </div>
-      {isOpen ? (
-        <MobileNav setIsOpen={setIsOpen} router={router} />
-      ) : (
-        <></>
-      )}
+      {isOpen ? <MobileNav setIsOpen={setIsOpen} router={router} /> : <></>}
       <DesktopNav setIsOpen={setIsOpen} router={router} />
     </div>
   );
 }
-
