@@ -1,8 +1,4 @@
-import NavButton from "./NavButton";
-import About from "./About";
-import Experience from "./Experience";
-import Project from "./Project";
-import { describe } from "node:test";
+
 
 export default function Work() {
   const projects = [
@@ -62,22 +58,6 @@ export default function Work() {
   ];
   return (
     <div className="flex flex-col w-full items-center justify-center text-white">
-      <About />
-      <Experience />
-      <div className="mt-[140px] flex flex-col items-center">
-        {projects.map((e, index) => {
-          return (
-            <Project
-            key = {index}
-              skill={e.skill}
-              link={e.link}
-              title={e.title}
-              posterLink={e.posterLink}
-              description={e.description}
-            />
-          );
-        })}
-      </div>
     </div>
   );
 }
