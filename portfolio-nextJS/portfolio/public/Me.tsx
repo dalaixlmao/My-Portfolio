@@ -1,30 +1,21 @@
-import Image from "next/image";
-import { useEffect, useState } from "react";
+// import Image from "next/image";
+// import { useEffect, useState } from "react";
 
 export default function Me() {
-  const [fadeIn, setFadeIn] = useState(false);
-  useEffect(() => {
-    setFadeIn(true);
-  });
-  return (
-    // <Image
-    //   src={"/Me.svg"}
-    //   alt="Picture of the author"
-    //   width={500}
-    //   height={500}
-    //   layout="responsive"
-    //   className={`duration-1000 ease-in-out ${
-    //     fadeIn ? "opacity-100" : "opacity-0"
-    //   }`}
-    // />
-
-    <div style={{ position: 'relative', width: '100%', height: '450px', display:"flex", flexDirection:"row", alignItems:"start" }} className="md:px-0 m-6">
-      <Image
-        src="/Me.svg"
-        alt="Description of image"
-        color="blue"
-        layout="fill" // Makes the image cover the container
-      />
+  // const [fadeIn, setFadeIn] = useState(false);
+  // useEffect(() => {
+  //   setFadeIn(true);
+  // });
+  return (<div className="mt-10"
+    style={{
+      backgroundImage: 'url("/images/Me.svg")',
+      backgroundSize: 'contain', // Adjust the size of the background
+      backgroundPosition: 'center', // Center the image
+      backgroundRepeat: "no-repeat",
+      width:"400px",
+      height:"400px"
+    }}
+  >
     </div>
   );
 }

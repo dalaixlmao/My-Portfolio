@@ -5,7 +5,7 @@ export default function ShortIntro() {
   const [fadeIn, setFadeIn] = useState(false);
   useEffect(() => {
     setFadeIn(true);
-  });
+  },[]);
   const router = useRouter();
   return (
     <div className="text-white flex flex-col md:mt-0">
