@@ -26,6 +26,14 @@ export default function Me() {
   const [hovered, setHovered] = useState(false);
 
   return (
+    <div className="w-full h-full"
+    style={{
+      backgroundImage: hovered?'url("/images/MyShadow.svg")':"",
+      backgroundSize: "contain", // Adjust the size of the background
+      backgroundPosition: "center right 5.25rem", // Center the image
+      backgroundRepeat: "no-repeat",
+    }}
+    >
     <div
     onMouseEnter={() => {
       if (ref.current) {
@@ -55,7 +63,7 @@ export default function Me() {
       {hovered && <div
         ref={ref2}
         // onClick={()=>{ router.push()}}
-        className={bangers.className + "  w-1/3 ml-[240px] mt-[120px] text-xl text-violet-950"}
+        className={bangers.className + "  w-1/3 ml-[230px] mt-[120px] text-xl text-violet-950"}
       >
         <div className="text-right">Want to connect?</div>
         <div className="flex mt-0 justify-around w-full h-full flex-row">
@@ -70,6 +78,6 @@ export default function Me() {
         </button>
         </div>
       </div>}
-    </div>
+    </div></div>
   );
 }
