@@ -5,6 +5,7 @@ import AboutPage from "@/components/AboutPage";
 import Details from "@/components/Details";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
+import ExperiencePage from "@/components/ExperiencePage";
 
 interface IntersectionOptions {
   root?: Element | null;
@@ -54,6 +55,9 @@ export default function Home(): JSX.Element {
   const [aboutRef, isAboutVisible] = useIntersection({
     threshold: 0.5,
   });
+  const [experienceRef, isExperienceVisible] = useIntersection({
+    threshold: 0.5,
+  });
 
   return (
     <div className="w-screen bg-slate-900 h-screen overflow-y-auto md:snap-y md:snap-mandatory scroll-smooth">
@@ -67,6 +71,9 @@ export default function Home(): JSX.Element {
       </section>
       <section ref={aboutRef} className="z-0 h-screen snap-start">
         {isAboutVisible && <About />}
+      </section>
+      <section ref={experienceRef} className="z-0 h-screen snap-start">
+        {isExperienceVisible && <ExperiencePage />}
       </section>
     </div>
   );

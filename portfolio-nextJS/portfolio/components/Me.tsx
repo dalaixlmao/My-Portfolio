@@ -26,11 +26,11 @@ export default function Me() {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div className="w-full h-full"
+    <div className="w-full h-full overflow-hidden"
     style={{
       backgroundImage: hovered?'url("/images/MyShadow.svg")':"",
-      backgroundSize: "contain", // Adjust the size of the background
-      backgroundPosition: "center right 5.25rem", // Center the image
+      backgroundSize: "contain", 
+      backgroundPosition: "center right 5.5rem",
       backgroundRepeat: "no-repeat",
     }}
     >
@@ -38,6 +38,7 @@ export default function Me() {
     onMouseEnter={() => {
       if (ref.current) {
         ref.current.textContent = "Hii!!";
+        // ref.current.style.backgroundPosition="center right 5rem";
       }
       setHovered(true);
     }}
@@ -47,11 +48,11 @@ export default function Me() {
       }
       setHovered(false);
     }}
-      className="hover:h-[298px] hover:w-4/5 border-2 border-violet-500 rounded-2xl h-[270px] hover:mt-0 mt-[28px] w-full transition-all"
+      className="hover:h-[298px] border-2 border-violet-500 rounded-2xl h-[270px] hover:mt-0 mt-[28px] w-full transition-all"
       style={{
         backgroundImage: 'url("/images/MeOnly.svg")',
-        backgroundSize: "contain", // Adjust the size of the background
-        backgroundPosition: "center", // Center the image
+        backgroundSize: "contain", 
+        backgroundPosition: hovered?"center right 6rem":"center",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -63,7 +64,7 @@ export default function Me() {
       {hovered && <div
         ref={ref2}
         // onClick={()=>{ router.push()}}
-        className={bangers.className + "  w-1/3 ml-[230px] mt-[120px] text-xl text-violet-950"}
+        className={bangers.className + "  w-1/3 ml-[220px] mt-[120px] text-xl text-violet-950"}
       >
         <div className="text-right">Want to connect?</div>
         <div className="flex mt-0 justify-around w-full h-full flex-row">

@@ -1,68 +1,79 @@
+import { useRef } from "react";
 import Skill from "./Skill";
+import { useRouter } from "next/navigation";
 
-export default function Experience() {
+interface Experience {
+  title: string;
+  company: string;
+  description: string[];
+  from: string;
+  to: string;
+  year: string;
+  companyLink: string;
+}
 
-    const skill = [
-        "Next.js", 
-        "React.js",
-        "Node.js",
-        "TypeScript",
-        "TailwindCSS",
-        "MongoDB",
-    ]
-
-
+export default function Experience({
+  title,
+  company,
+  description,
+  from,
+  to,
+  year,
+  companyLink,
+}: Experience) {
+  const ref = useRef<HTMLDivElement>(null);
+  const router = useRouter();
   return (
-    <div className="w-full flex flex-col md:items-start items-center md:flex-row mt-[140px] transition-all text-sm text-white/50 hover:bg-white/10 hover:border-white/10 pmd:x-6 py-4 rounded-2xl border border-white/30 shadow-inner leading-relaxed">
-      <div className="w-1/2 md:w-1/5 flex flex-row md:flex-col items-start pl-3">
-        <div className=" flex flex-row items-center">
-          <div>May</div>
-          <div className="w-3 h-[1px] bg-white/50 mx-1"></div> <div>Nov,</div>
+    <div className="flex flex-col rounded-lg hover:bg-violet-100 hover:bg-opacity-[5%] px-3 py-2 transition-all">
+      <div className="flex flex-row">
+        <div className="text-violet-100">{title} <a className="text-violet-400 font-semibold">@</a></div>
+
+        <div
+          onClick={() => {
+            router.push(companyLink);
+          }}
+          onMouseEnter={() => {
+            if (ref.current) ref.current.style.width = "100%";
+          }}
+          onMouseLeave={() => {
+            if (ref.current) ref.current.style.width = "0%";
+          }}
+          className="ml-1 text-violet-400 font-semibold cursor-pointer transition-all"
+        >
+          {company}
+          <div
+            ref={ref}
+            className="bg-violet-400 h-[1px] w-0 mt-[-5px] transition-all"
+          ></div>
         </div>
-        <div className="md:ml-0 ml-2">2023</div>
-      </div>
-      <div className="ml-6 md:w-4/5 w-full">
-        <div className="text-lg font-medium text-white flex md:flex-row flex-col md:items-center">
-          <div>Full Stack Developer</div>
-          <div className="md:block hidden h-1 w-1 bg-white rounded-full ml-2"></div>
-          <div className="md:ml-2 text-white/70">Reslink</div>
-          <TopRight />
-        </div>
-        <div className="mt-2">
-          Architected and implemented RESTful APIs, ensuring data flow and
-          integration with microservices. Engineered and optimised client-side
-          components, enhancing performance and user experience. Developed and
-          deployed responsive web applications using Next.js, contributing to
-          the full software development lifecycle from ideation to deployment.
-          Key Achievements Boosted application performance by 30% through
-          client-side optimizations. Successfully delivered 5 major features.
-        </div>
-        <div className="flex flex-row flex-wrap"> {
-            skill.map((e, index)=>{
-                return <Skill key={index} text={e} />
-            })
-            }</div>
       </div>
 
+      <div className="text-xs text-violet-100/40">
+        {from + " - " + to + ", " + year}
+      </div>
+      <div>
+        <ul className="text-xs font-extralight leading-relaxed text-violet-100/50">
+          {description.map((el, index) => {
+            return (
+              <div className="flex py-1 flex-row">
+                <div></div><Bullet />
+                <li className="w-[90%] ml-2 flex flex-row">
+                 {el}
+                </li>
+              </div>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
 
-function TopRight() {
+function Bullet() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={2}
-      stroke="currentColor"
-      className="ml-2 size-3 md:block hidden"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-      />
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#a78bfa" className="size-2 mt-1">
+  <path fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clipRule="evenodd" />
+</svg>
+
   );
 }
