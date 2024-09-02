@@ -25,7 +25,7 @@ export default function About() {
             development, where I blend rigorous engineering principles with
             creative flair.
           </div>
-          <div className="max-w-[400px] w-[400px] min-w-[350px] xl:w-2/3 h-[300px] mt-12 border bg-violet-500 border-violet-400 rounded-lg">
+          <div className="max-w-[400px] w-[400px] min-w-[350px] xl:w-2/3 h-[300px] mt-12 border bg-violet-500 border-violet-400 rounded-2xl">
             <Me />
           </div>
         </div>

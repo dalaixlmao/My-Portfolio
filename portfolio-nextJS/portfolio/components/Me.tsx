@@ -39,7 +39,7 @@ export default function Me() {
       }
       setHovered(false);
     }}
-      className="hover:h-[298px] hover:w-4/5 border-2 border-violet-500 rounded-lg h-[270px] hover:mt-0 mt-[28px] w-full transition-all"
+      className="hover:h-[298px] hover:w-4/5 border-2 border-violet-500 rounded-2xl h-[270px] hover:mt-0 mt-[28px] w-full transition-all"
       style={{
         backgroundImage: 'url("/images/MeOnly.svg")',
         backgroundSize: "contain", // Adjust the size of the background
