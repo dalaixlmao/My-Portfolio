@@ -30,7 +30,7 @@ export default function Me() {
     style={{
       backgroundImage: hovered?'url("/images/MyShadow.svg")':"",
       backgroundSize: "contain", 
-      backgroundPosition: "center right 5.5rem",
+      backgroundPosition: "center right 6.5rem",
       backgroundRepeat: "no-repeat",
     }}
     >
@@ -52,7 +52,7 @@ export default function Me() {
       style={{
         backgroundImage: 'url("/images/MeOnly.svg")',
         backgroundSize: "contain", 
-        backgroundPosition: hovered?"center right 6rem":"center",
+        backgroundPosition: hovered?"center right 7rem":"center",
         backgroundRepeat: "no-repeat",
       }}
     >
