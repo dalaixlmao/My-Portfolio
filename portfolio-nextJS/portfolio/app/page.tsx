@@ -85,7 +85,7 @@ export default function Home(): JSX.Element {
       <section ref={experienceRef} className="z-20 h-screen snap-start">
         {isExperienceVisible && <ExperiencePage />}
       </section>
-      <section ref={ProjectRef} className="z-20 h-screen snap-start">
+      <section ref={ProjectRef} className="z-20 min-h-screen snap-start">
         {isProjectVisible && <ProjectPage />}
       </section>
       <section ref={contactMeRef} className="z-20 h-screen snap-start">
