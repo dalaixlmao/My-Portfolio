@@ -62,10 +62,10 @@ export default function Home(): JSX.Element {
     threshold: 0.5,
   });
   const [ProjectRef, isProjectVisible] = useIntersection({
-    threshold: 0.01,
+    threshold: 0.5,
   });
   const [contactMeRef, isContactMeVisible] = useIntersection({
-    threshold: 0.99,
+    threshold: 0.5,
   });
 
   return (
