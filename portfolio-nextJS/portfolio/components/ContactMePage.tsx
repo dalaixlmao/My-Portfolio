@@ -5,7 +5,7 @@ export default function ContactMePage() {
   const router = useRouter();
   return (
     <Card>
-      <div className="flex flex-col items-center justify-between mt-36">
+      <div className="flex flex-col items-center justify-between mt-[1000px] md:mt-36">
         <div className="flex flex-col items-center">
           <div className="hover:bg-clip-text cursor-default transition-all hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500  md:text-6xl text-center text-4xl text-semibold">
             Get In Touch
