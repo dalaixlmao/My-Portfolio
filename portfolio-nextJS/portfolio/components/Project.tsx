@@ -79,7 +79,7 @@ export default function Project({
         <div className={"mt-2 text-[15px] font-light text-violet-100/50"}>{description}</div>
         <div className="flex flex-row flex-wrap mt-3">
           {skill.map((elem, index)=>{
-            return <div className={spaceMono.className+" mr-4 text-violet-100/30 leading relaxed text-[12px]"}>{elem}</div>
+            return <div key={index} className={spaceMono.className+" mr-4 text-violet-100/30 leading relaxed text-[12px]"}>{elem}</div>
           })}
         </div>
       </div>

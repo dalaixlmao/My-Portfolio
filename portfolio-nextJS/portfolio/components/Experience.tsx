@@ -55,7 +55,7 @@ export default function Experience({
         <ul className="text-xs font-extralight leading-relaxed text-violet-100/50">
           {description.map((el, index) => {
             return (
-              <div className="flex py-1 flex-row">
+              <div key={index} className="flex py-1 flex-row">
                 <div></div><Bullet />
                 <li className="w-[90%] ml-2 flex flex-row">
                  {el}
