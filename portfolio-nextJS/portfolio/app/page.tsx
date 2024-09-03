@@ -6,6 +6,7 @@ import Details from "@/components/Details";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import ExperiencePage from "@/components/ExperiencePage";
+import ProjectPage from "../components/ProjectPage";
 
 interface IntersectionOptions {
   root?: Element | null;
@@ -58,22 +59,28 @@ export default function Home(): JSX.Element {
   const [experienceRef, isExperienceVisible] = useIntersection({
     threshold: 0.5,
   });
+  const [ProjectRef, isProjectVisible] = useIntersection({
+    threshold: 0.5,
+  });
 
   return (
-    <div className="w-screen bg-slate-900 h-screen overflow-y-auto md:snap-y md:snap-mandatory scroll-smooth">
+    <div className="z-10 w-screen bg-slate-900 h-screen overflow-y-auto lg:snap-y md:snap-mandatory scroll-smooth">
       <CursorArea />
-      <div className="absolute fixed top-0 z-20"><Navbar /></div>
-      <section ref={landingRef} className="z-0 h-screen snap-start">
+      <div className="absolute fixed top-0 z-30"><Navbar /></div>
+      <section ref={landingRef} className="z-20 h-screen snap-start">
         {isLandingVisible && <Landing />}
       </section>
-      <section ref={aboutPageRef} className="z-0 h-screen snap-start">
+      <section ref={aboutPageRef} className="z-20 h-screen snap-start">
         {isAboutPageVisible && <AboutPage />}
       </section>
-      <section ref={aboutRef} className="z-0 h-screen snap-start">
+      <section ref={aboutRef} className="z-20 h-screen snap-start">
         {isAboutVisible && <About />}
       </section>
-      <section ref={experienceRef} className="z-0 h-screen snap-start">
+      <section ref={experienceRef} className="z-20 h-screen snap-start">
         {isExperienceVisible && <ExperiencePage />}
+      </section>
+      <section ref={ProjectRef} className="z-20 h-screen snap-start">
+        {isProjectVisible && <ProjectPage />}
       </section>
     </div>
   );

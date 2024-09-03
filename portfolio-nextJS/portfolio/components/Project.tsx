@@ -1,33 +1,85 @@
+import { useRef, useState } from "react";
 import Skill from "./Skill";
 import { useRouter } from "next/navigation";
+import { linkSync } from "fs";
+import { Space_Mono } from "next/font/google";
 
-export default function Project({title, description, link, skill, posterLink}:{title:string, description:string, link:string[], skill:string[], posterLink:string}) {
+const spaceMono = Space_Mono({ subsets:["latin"], weight:["400", "700"]})
 
+interface ProjectType {
+  title: string;
+  description: string;
+  link: string[];
+  skill: string[];
+  posterLink: string;
+}
+
+export default function Project({
+  title,
+  description,
+  link,
+  skill,
+  posterLink,
+}: ProjectType) {
+  const [hovered, setHovered] = useState(false);
+  const [hovered1, setHovered1] = useState(false);
+  const [hoveredAll, setHoveredAll] = useState(false);
   const router = useRouter();
   return (
-    <div onClick={()=>{router.push(link[0])}} className="w-full flex flex-col md:items-start items-center md:flex-row mt-4 text-sm text-white/50 cursor-pointer hover:bg-white/10 hover:border-white/10 transition-all md:px-6 px-2 py-4 rounded-2xl border border-white/30 shadow-inner leading-relaxed">
-      <div
-        className="w-24 h-12 flex flex-col items-start mt-2 rounded-md bg-white border border-slate-400"
-        style={{
-          backgroundImage:
-            `url(${posterLink})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      ></div>
-      <div className="ml-6 md:mt-0 mt-4 w-full flex flex-col">
-        <div className="text-lg font-medium text-white flex flex-row items-center">
-          <div>{title}</div>
-          <TopRight />
+    <div
+      onClick={() => {
+        if(!hovered1)
+        router.push(link[0]);
+      }}
+      onMouseEnter={() => {
+        setHoveredAll(true);
+      }}
+      onMouseLeave={() => {
+        setHoveredAll(false);
+      }}
+      className="z-10 w-[90%] rounded-lg p-4 cursor-pointer transition-all flex flex-col h-full bg-white bg-opacity-[5%] hover:bg-opacity-[10%] mt-2 hover:mt-0 transition-all"
+    >
+      <div className="z-20 flex flex-row items-center justify-between">
+        <div>
+          <Folder />
         </div>
-        <div className="mt-2">
-          {description}
+        <div className="flex flex-row" title="Deployed Link">
+          {link[1] && <div
+          onClick={() => {
+            router.push(link[1]);
+          }}
+          onMouseEnter={() => {
+            setHovered1(true);
+          }}
+          onMouseLeave={() => {
+            setHovered1(false);
+          }}
+           className="">
+            <LinkButton hovered={hovered1} />
+          </div>}
+          <div
+          title="Github Link"
+          onMouseEnter={() => {
+            setHovered(true);
+          }}
+          onMouseLeave={() => {
+            setHovered(false);
+          }}
+            onClick={() => {
+              router.push(link[0]);
+            }}
+            className={"transition-all"}
+          >
+            <TopRight hovered={hovered} />
+          </div>
         </div>
-        <div className="flex flex-row flex-wrap">
-          {" "}
-          {skill.map((e, index) => {
-            return <Skill key={index} text={e} />;
+      </div>
+      <div className="z-10">
+        <div className={hoveredAll?"text-violet-400 mt-2 text-sm font-semibold":"text-violet-100 mt-2 text-sm font-semibold"}>{title}</div>
+        <div className={"mt-2 text-[15px] font-light text-violet-100/50"}>{description}</div>
+        <div className="flex flex-row flex-wrap mt-3">
+          {skill.map((elem, index)=>{
+            return <div className={spaceMono.className+" mr-4 text-violet-100/30 leading relaxed text-[12px]"}>{elem}</div>
           })}
         </div>
       </div>
@@ -35,20 +87,59 @@ export default function Project({title, description, link, skill, posterLink}:{t
   );
 }
 
-function TopRight() {
+function LinkButton({ hovered }: { hovered: boolean }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke={hovered ? "#a78bfa" : "white"}
+      className="size-4 mr-3"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+      />
+    </svg>
+  );
+}
+
+function TopRight({ hovered }: { hovered: boolean }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={2}
-      stroke="currentColor"
-      className="ml-2 size-3 md:block hidden"
+      stroke={hovered ? "#a78bfa" : "white"}
+      className={"size-4 transition-all hover:violet-400"
+      }
     >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+      />
+    </svg>
+  );
+}
+
+function Folder() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="#c084fc"
+      className="size-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
       />
     </svg>
   );
