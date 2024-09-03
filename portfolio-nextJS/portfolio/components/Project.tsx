@@ -27,10 +27,6 @@ export default function Project({
   const router = useRouter();
   return (
     <div
-      onClick={() => {
-        if(!hovered1)
-        router.push(link[0]);
-      }}
       onMouseEnter={() => {
         setHoveredAll(true);
       }}
@@ -40,7 +36,11 @@ export default function Project({
       className="z-10 w-[90%] rounded-lg p-4 cursor-pointer transition-all flex flex-col h-full bg-white bg-opacity-[5%] hover:bg-opacity-[10%] mt-2 hover:mt-0 transition-all"
     >
       <div className="z-20 flex flex-row items-center justify-between">
-        <div>
+        <div
+        onClick={() => {
+          if(!hovered1)
+          router.push(link[0]);
+        }}>
           <Folder />
         </div>
         <div className="flex flex-row" title="Deployed Link">
@@ -74,7 +74,12 @@ export default function Project({
           </div>
         </div>
       </div>
-      <div className="z-10">
+      <div
+      onClick={() => {
+        if(!hovered1)
+        router.push(link[0]);
+      }}
+       className="z-10">
         <div className={hoveredAll?"text-violet-400 mt-2 text-sm font-semibold":"text-violet-100 mt-2 text-sm font-semibold"}>{title}</div>
         <div className={"mt-2 text-[15px] font-light text-violet-100/50"}>{description}</div>
         <div className="flex flex-row flex-wrap mt-3">

@@ -7,6 +7,8 @@ import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import ExperiencePage from "@/components/ExperiencePage";
 import ProjectPage from "../components/ProjectPage";
+import ContactMePage from "@/components/ContactMePage";
+import Social from "@/components/Social";
 
 interface IntersectionOptions {
   root?: Element | null;
@@ -62,11 +64,15 @@ export default function Home(): JSX.Element {
   const [ProjectRef, isProjectVisible] = useIntersection({
     threshold: 0.5,
   });
+  const [contactMeRef, isContactMeVisible] = useIntersection({
+    threshold: 0.5,
+  });
 
   return (
     <div className="z-10 w-screen bg-slate-900 h-screen overflow-y-auto lg:snap-y md:snap-mandatory scroll-smooth">
       <CursorArea />
-      <div className="absolute fixed top-0 z-30"><Navbar /></div>
+      {!isLandingVisible && <div className="absolute fixed top-0 z-30"><Navbar /></div>}
+      {!isLandingVisible && <div className="absolute fixed bottom-0 z-30 text-white md:block hidden"><Social /></div>}
       <section ref={landingRef} className="z-20 h-screen snap-start">
         {isLandingVisible && <Landing />}
       </section>
@@ -81,6 +87,9 @@ export default function Home(): JSX.Element {
       </section>
       <section ref={ProjectRef} className="z-20 h-screen snap-start">
         {isProjectVisible && <ProjectPage />}
+      </section>
+      <section ref={contactMeRef} className="z-20 h-screen snap-start">
+        {isContactMeVisible && <ContactMePage/>}
       </section>
     </div>
   );
