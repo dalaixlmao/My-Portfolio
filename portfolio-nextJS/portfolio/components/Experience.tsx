@@ -24,11 +24,11 @@ export default function Experience({
   const ref = useRef<HTMLDivElement>(null);
   const router = useRouter();
   return (
-    <div className="flex flex-col rounded-lg hover:bg-violet-100 hover:bg-opacity-[5%] px-3 py-2 transition-all">
+    <div className="z-10 flex flex-col rounded-lg hover:bg-violet-100 hover:bg-opacity-[5%] px-3 py-2 transition-all">
       <div className="flex flex-row">
         <div className="text-violet-100">{title} <a className="text-violet-400 font-semibold">@</a></div>
 
-        <div
+        <button
           onClick={() => {
             router.push(companyLink);
           }}
@@ -38,6 +38,7 @@ export default function Experience({
           onMouseLeave={() => {
             if (ref.current) ref.current.style.width = "0%";
           }}
+          onTouchStart={()=>{router.push(companyLink);}}
           className="ml-1 text-violet-400 font-semibold cursor-pointer transition-all"
         >
           {company}
@@ -45,7 +46,7 @@ export default function Experience({
             ref={ref}
             className="bg-violet-400 h-[1px] w-0 mt-[-5px] duration-500 transition-all"
           ></div>
-        </div>
+        </button>
       </div>
 
       <div className="text-xs text-violet-100/40">

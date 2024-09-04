@@ -32,7 +32,7 @@ export default function Me() {
       <div
         onMouseEnter={handleInteraction}
         onMouseLeave={handleInteraction}
-        className="hover:h-[298px] border-2 hover:border-transparent border-violet-500 rounded-2xl h-[270px] hover:mt-0 mt-[28px] w-full transition-all"
+        className="z-10 hover:h-[298px] border-2 hover:border-transparent border-violet-500 rounded-2xl h-[270px] hover:mt-0 mt-[28px] w-full transition-all"
         style={{
           backgroundImage: 'url("/images/MeOnly.svg")',
           backgroundSize: "contain",
