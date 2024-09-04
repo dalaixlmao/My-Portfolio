@@ -6,14 +6,23 @@ import DesktopNav from "./DesktopNav";
 import Cross from "@/public/Cross";
 import Menu from "@/public/Menu";
 import { NavButtonDesktop, NavButtonMobile } from "./NavButton";
+import Link from "next/link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   return (
     <div className="transition-all shadow-xl w-screen flex flex-row justify-between px-4 md:px-12 py-3 bg-slate-900/70 backdrop-blur-md">
-      <div className="cursor-pointer">
-        <Logo />
-      </div>
+      <Link href={"#Default1"}>
+        <div className="cursor-pointer md:block hidden">
+          <Logo />
+        </div>
+      </Link>
+      <Link href={"#Default"}>
+        <div className="cursor-pointer md:hidden block">
+          <Logo />
+        </div>
+      </Link>
+
       <div className="md:hidden transition-all z-30 block w-full flex-col justify-center items-end flex">
         <div
           onClick={() => {

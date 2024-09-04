@@ -11,11 +11,18 @@ export default function Me() {
   const ref = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState(false);
 
-  const handleInteraction = () => {
+  const handleInteraction1 = () => {
     if (ref.current) {
-      ref.current.textContent = hovered ? "" : "Hii!!";
+      ref.current.textContent = "Hii!!";
     }
-    setHovered(!hovered);
+    setHovered(true);
+    console.log("clicked");
+  };
+  const handleInteraction2 = () => {
+    if (ref.current) {
+      ref.current.textContent ="";
+    }
+    setHovered(false);
     console.log("clicked");
   };
 
@@ -30,8 +37,8 @@ export default function Me() {
       }}
     >
       <div
-        onMouseEnter={handleInteraction}
-        onMouseLeave={handleInteraction}
+        onMouseEnter={handleInteraction1}
+        onMouseLeave={handleInteraction2}
         className="z-10 hover:h-[298px] border-2 hover:border-transparent border-violet-500 rounded-2xl h-[270px] hover:mt-0 mt-[28px] w-full transition-all"
         style={{
           backgroundImage: 'url("/images/MeOnly.svg")',

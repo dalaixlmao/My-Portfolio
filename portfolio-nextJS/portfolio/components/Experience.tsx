@@ -24,7 +24,7 @@ export default function Experience({
   const ref = useRef<HTMLDivElement>(null);
   const router = useRouter();
   return (
-    <div className="z-10 flex flex-col rounded-lg hover:bg-violet-100 hover:bg-opacity-[5%] px-3 py-2 transition-all">
+    <div className="flex flex-col rounded-lg hover:bg-violet-100 hover:bg-opacity-[5%] px-3 py-2 transition-all">
       <div className="flex flex-row">
         <div className="text-violet-100">{title} <a className="text-violet-400 font-semibold">@</a></div>
 

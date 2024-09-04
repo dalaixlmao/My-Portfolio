@@ -9,7 +9,7 @@ export default function ShortIntro() {
   const router = useRouter();
   return (
     <div className="text-white flex flex-col md:mt-0">
-      <div className="text-sm mb-5 text-violet-400">Hi, my name is</div>
+      <div className="text-sm text-violet-400">Hi, my name is</div>
       <div className="text-3xl lg:text-6xl font-bold z-10">
         Anubhav Aaryan
       </div>

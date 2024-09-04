@@ -75,7 +75,7 @@ export default function Home(): JSX.Element {
       <div className="md:block hidden">
         <CursorArea />
         {!isLandingVisible && (
-          <div className="absolute fixed top-0 z-30">
+          <div className="absolute fixed top-0 z-40">
             <Navbar />
           </div>
         )}
@@ -95,7 +95,7 @@ export default function Home(): JSX.Element {
         {!isLandingVisible && (
           <div>
             <section
-              id=""
+              id="Default1"
               ref={aboutPageRef}
               className="z-20 h-screen snap-start"
             >
@@ -145,19 +145,19 @@ export default function Home(): JSX.Element {
           />
         </section>
         {!isLandingVisible && <div>
-          <section id={""} className="z-20">
+          <section id={"Default"} className="z-40">
             <AboutPage />
           </section>
-          <section id={"AboutMobile"} className="z-20">
+          <section id={"AboutMobile"} className="z-30">
             <About />
           </section>
-          <section id={"ExperienceMobile"} className="z-20">
+          <section id={"ExperienceMobile"} className="z-20 mt-12">
             <ExperiencePage />
           </section>
-          <section id={"ProjectsMobile"} className="z-20">
+          <section id={"ProjectsMobile"} className="z-10">
             <ProjectPage />
           </section>
-          <section id={"ContactMobile"} className="z-20">
+          <section id={"ContactMobile"} className="z-0">
             <ContactMePage />
           </section>
         </div>}

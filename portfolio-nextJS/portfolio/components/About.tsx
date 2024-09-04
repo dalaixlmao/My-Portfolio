@@ -5,7 +5,7 @@ import Headers from "./Headers";
 export default function About() {
   return (
     <Card>
-      <div className="flex flex-col w-full md:px-3 pt-48 md:pt-0 md:mt-0">
+      <div className="z-20 pt-48 flex flex-col w-full md:px-3 md:pt-0 mb-6">
         <Headers text="About Me" />
         <div onClick={()=>{console.log("clicked")}} className="w-full h-full flex flex-col items-center lg:items-start xl:flex-row">
           <div  className=" w-full text-xs mt-6 md:mt-12 md:pr-9 wrap text-violet-100/50 font-light leading-relaxed">
@@ -21,8 +21,8 @@ export default function About() {
             development, where I blend rigorous engineering principles with
             creative flair.
           </div>
-          <div onClick={()=>{console.log("clicked")}} className="" >
-            <div className="max-w-[350px] w-[350px] min-w-[350px] xl:w-2/3 h-[300px] mt-12 border bg-violet-500 border-violet-400 rounded-2xl">
+          <div onClick={()=>{console.log("clicked")}} className="w-full h-full flex flex-col items-center" >
+            <div className="max-w-[350px] w-[350px] min-w-[350px] xl:w-2/3 h-[300px] mt-5 lg:mt-12 border bg-violet-500 border-violet-400 rounded-2xl">
               <Me />
             </div>
           </div>
