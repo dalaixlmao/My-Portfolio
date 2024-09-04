@@ -9,6 +9,7 @@ import ExperiencePage from "@/components/ExperiencePage";
 import ProjectPage from "../components/ProjectPage";
 import ContactMePage from "@/components/ContactMePage";
 import Social from "@/components/Social";
+import Head from "next/head";
 
 interface IntersectionOptions {
   root?: Element | null;
@@ -72,6 +73,9 @@ export default function Home(): JSX.Element {
 
   return (
     <div className="z-10 w-screen bg-slate-900 h-screen overflow-y-auto lg:snap-y md:snap-mandatory scroll-smooth">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="md:block hidden">
         <CursorArea />
         {!isLandingVisible && (
