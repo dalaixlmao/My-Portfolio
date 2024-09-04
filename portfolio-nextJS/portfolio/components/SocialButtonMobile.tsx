@@ -18,7 +18,7 @@ export default function SocialButtonMobile({
   return (
     <IconContext.Provider
       value={{
-        color: hovered ? "#a78bfa" : "white",
+        color: "#a78bfa",
         className: !hovered
           ? "opacity-50 h-5 w-5 transition-all py-[2px] pr-[4px]"
           : "opacity-100 h-5 w-5 transition-all py-0 pr-0",

@@ -107,7 +107,6 @@ export default function Home(): JSX.Element {
 }
 
 
-
 const CursorArea = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
