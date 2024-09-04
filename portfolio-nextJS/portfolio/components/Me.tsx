@@ -28,7 +28,6 @@ export default function Me() {
         backgroundPosition: "center right 6.5rem",
         backgroundRepeat: "no-repeat",
       }}
-      onTouchStart={handleInteraction}
     >
       <div
         onMouseEnter={handleInteraction}
