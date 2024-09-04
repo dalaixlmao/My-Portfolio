@@ -6,7 +6,7 @@ import Project from "./Project";
 export default function ProjectPage() {
   return (
     <Card>
-      <div className="flex flex-col w-full mt-[1000px] md:mt-36">
+      <div className="flex flex-col w-full mt-[1000px] pt-72 md:pt-0 md:mt-36">
         <div className="w-full">
           <Headers text="Projects" />
         </div>

@@ -1,11 +1,20 @@
 import Card from "./Card";
 import { useRouter } from "next/navigation";
+import SocialButtonMobile from "./SocialButtonMobile";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { SiCodeforces } from "react-icons/si";
+import { SiLeetcode } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { IconContext } from "react-icons";
+import SocialButton from "./SocialButton"
 
 export default function ContactMePage() {
   const router = useRouter();
   return (
     <Card>
-      <div className="pt-24 h-screen md:h-auto flex flex-col items-center justify-between mt-[2000px] md:mt-36">
+      <div className="md:h-auto flex flex-col items-center h-screen justify-around mt-[2600px] pt-12 md:pt-0 md:mt-36">
         <div className="flex flex-col items-center">
           <div className="duration-500 hover:bg-clip-text cursor-default transition-all hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500  md:text-6xl text-center text-4xl text-semibold">
             Get In Touch
@@ -24,12 +33,45 @@ export default function ContactMePage() {
             Connect Here
           </button>
         </div>
-        <div>
+
+        <div className="mt-[80px]">
+        <div className="md:hidden block flex flex-row w-full justify-around pb-1 border-b border-white/10">
+                <SocialButtonMobile
+                  button={<FaInstagram />}
+                  link="https://www.instagram.com/__4nubhav__/"
+                  title={"Instagram"}
+                />
+                <SocialButtonMobile
+                  button={<FaLinkedin />}
+                  link="https://www.linkedin.com/in/anubhav-aaryan-099987201/"
+                  title={"Linkedin"}
+                />
+                <SocialButtonMobile
+                  button={<SiCodeforces />}
+                  link="https://codeforces.com/profile/_watch_this_"
+                  title={"Codeforces"}
+                />
+                <SocialButtonMobile
+                  button={<SiLeetcode />}
+                  link="https://leetcode.com/u/aaryan4nubhav/"
+                  title={"Leetcode"}
+                />
+                <SocialButtonMobile
+                  button={<FaGithub />}
+                  link="https://github.com/dalaixlmao"
+                  title={"Github"}
+                />
+                <SocialButtonMobile
+                  button={<SiGmail />}
+                  link="mailto:aaryan4nubhav@gmail.com"
+                  title={"Gmail"}
+                />
+              </div>
           <div
             onClick={() => {
               router.push("https://github.com/dalaixlmao");
             }}
-            className="cursor-pointer mt-[80px] text-[12px] w-[200px] font-light text-violet-400 flex flex-row justify-between"
+            className="cursor-pointer mt-1  text-[12px] w-[200px] font-light text-violet-400 flex flex-row justify-between"
           >
             <a>Developed</a>
             <a>by</a>

@@ -27,13 +27,13 @@ export default function MobileNav({ setIsOpen, router }: NavProps) {
         ></div>
 
         <div className="flex text-xs flex-col items-center justify-around h-2/5">
-          <NavButtonMobile text="About" onClick={() => {}} isActive={true} />
+          <NavButtonMobile text="About" onClick={() => {setIsOpen(false);}} isActive={true} />
           <NavButtonMobile
             text="Experience"
-            onClick={() => {}}
+            onClick={() => {setIsOpen(false);}}
             isActive={true}
           />
-          <NavButtonMobile text="Projects" onClick={() => {}} isActive={true} />
+          <NavButtonMobile text="Projects" onClick={() => {setIsOpen(false);}} isActive={true} />
           <div
             onClick={() => {
               router.push(

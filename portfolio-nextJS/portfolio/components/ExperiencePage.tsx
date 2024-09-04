@@ -23,7 +23,7 @@ export default function ExperiencePage() {
 
   return (
     <Card>
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col md:pt-0 pt-36 w-full">
         <Headers text="Experience" />
         <div className="flex flex-col mt-7">
           {experiences.map((elem, index) => {
