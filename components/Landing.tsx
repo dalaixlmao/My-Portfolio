@@ -22,7 +22,7 @@ export default function Landing({visible, setIsLandingVisible}:{visible:boolean,
       ref.current.style.display="none";
     }, 4000)
 
-  }, []);
+  }, [setIsLandingVisible, setFadeIn]);
   return (
     <div
     ref={ref}
