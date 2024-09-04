@@ -4,10 +4,12 @@ import { IconContext } from "react-icons";
 import { useRouter } from "next/navigation";
 
 export default function SocialButton({
+  fade,
   button,
   link,
   title,
 }: {
+  fade:boolean;
   button: ReactNode;
   link: string;
   title: string;
@@ -49,7 +51,7 @@ export default function SocialButton({
         onClick={() => {
           router.push(link);
         }}
-        className="flex cursor-pointer flex-row items-center duration-150 transition-all"
+        className={`flex cursor-pointer flex-row items-center duration-150 transition-all ${fade ? "opacity-100" : "opacity-0"}`}
         title={title}
       >
         <div ref={ref} className="h-[1px] w-[16px] bg-violet-100/50"></div>
