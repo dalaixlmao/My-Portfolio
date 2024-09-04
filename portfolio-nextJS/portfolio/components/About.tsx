@@ -5,7 +5,7 @@ import Headers from "./Headers";
 export default function About() {
   return (
     <Card>
-      <div className="z-20 pt-48 flex flex-col w-full md:px-3 md:pt-0 mb-6">
+      <div className="z-20 pt-36 flex flex-col w-full md:px-3 md:pt-0 mb-6">
         <Headers text="About Me" />
         <div onClick={()=>{console.log("clicked")}} className="w-full h-full flex flex-col items-center lg:items-start xl:flex-row">
           <div  className=" w-full text-xs mt-6 md:mt-12 md:pr-9 wrap text-violet-100/50 font-light leading-relaxed">
