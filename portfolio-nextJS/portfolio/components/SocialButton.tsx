@@ -27,16 +27,29 @@ export default function SocialButton({
       <div
         onMouseEnter={() => {
           setHovered(true);
-          if (ref.current) ref.current.style.width = "30px";
+          if (ref.current) {
+            ref.current.style.width = "30px";
+            ref.current.style.backgroundColor = "#a78bfa";
+            ref.current.style.opacity="100%"
+          }
+        }}
+        style={{
+          transitionProperty: "all",
+          transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+          transitionDuration: "150ms",
         }}
         onMouseLeave={() => {
           setHovered(false);
-          if (ref.current) ref.current.style.width = "16px";
+          if (ref.current) {
+            ref.current.style.width = "16px";
+            ref.current.style.backgroundColor = "white";
+            ref.current.style.opacity="50%"
+          }
         }}
         onClick={() => {
           router.push(link);
         }}
-        className="flex cursor-pointer flex-row items-center transition-all"
+        className="flex cursor-pointer flex-row items-center duration-150 transition-all"
         title={title}
       >
         <div ref={ref} className="h-[1px] w-[16px] bg-violet-100/50"></div>

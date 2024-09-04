@@ -43,7 +43,7 @@ export default function Experience({
           {company}
           <div
             ref={ref}
-            className="bg-violet-400 h-[1px] w-0 mt-[-5px] transition-all"
+            className="bg-violet-400 h-[1px] w-0 mt-[-5px] duration-500 transition-all"
           ></div>
         </div>
       </div>

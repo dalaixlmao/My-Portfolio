@@ -14,7 +14,7 @@ export default function ShortIntro() {
         Anubhav Aaryan
       </div>
       <div
-        className={`h-1 h-[8px] lg:h-3 mt-[-15px] md:mt-[-20px] lg:mt-[-30px] bg-gradient-to-r from-pink-500/50 to-violet-500/50 transition-transform duration-1000 ${
+        className={`h-1 h-[8px] lg:h-3 mt-[-15px] md:mt-[-20px] lg:mt-[-30px] bg-gradient-to-r from-pink-500/50 to-violet-500/50 transition-all duration-[1000ms] ${
           fadeIn ? "transform translate-x-0" : "-translate-x-full"
         }`}
       ></div>

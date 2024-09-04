@@ -5,9 +5,9 @@ export default function ContactMePage() {
   const router = useRouter();
   return (
     <Card>
-      <div className="flex flex-col items-center justify-between mt-[300px] md:mt-36">
+      <div className="pt-24 h-screen md:h-auto flex flex-col items-center justify-between mt-[2000px] md:mt-36">
         <div className="flex flex-col items-center">
-          <div className="hover:bg-clip-text cursor-default transition-all hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500  md:text-6xl text-center text-4xl text-semibold">
+          <div className="duration-500 hover:bg-clip-text cursor-default transition-all hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500  md:text-6xl text-center text-4xl text-semibold">
             Get In Touch
           </div>
           <div className="text-center text-xs text-violet-100/50 font-light leading-relaxed mt-4 max-w-[550px]">
@@ -19,7 +19,7 @@ export default function ContactMePage() {
             onClick={() => {
               router.push("mailto:aaryan4nubhav@gmail.com");
             }}
-            className="hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 hover:border-transparent border py-3 px-5 mt-8 rounded-md text-violet-600 border-violet-600 hover:text-white hover:bg-violet-600 hover:font-medium transition-all"
+            className="duration-250 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 hover:border-transparent border py-3 px-5 mt-8 rounded-md text-violet-600 border-violet-600 hover:text-white hover:bg-violet-600 hover:font-medium transition-all"
           >
             Connect Here
           </button>

@@ -70,27 +70,38 @@ export default function Home(): JSX.Element {
 
   return (
     <div className="z-10 w-screen bg-slate-900 h-screen overflow-y-auto lg:snap-y md:snap-mandatory scroll-smooth">
-      <CursorArea />
+      <div className="md:block hidden">
+        <CursorArea />
+        {!isLandingVisible && <div className="absolute fixed top-0 z-30"><Navbar /></div>}
+        {!isLandingVisible && <div className="absolute fixed bottom-0 z-30 text-white md:block hidden"><Social /></div>}
+        <section ref={landingRef} className="z-20 h-screen snap-start">
+          {isLandingVisible && <Landing />}
+        </section>
+        <section ref={aboutPageRef} className="z-20 h-screen snap-start">
+          {isAboutPageVisible && <AboutPage />}
+        </section>
+        <section ref={aboutRef} className="z-20 h-screen snap-start">
+          {isAboutVisible && <About />}
+        </section>
+        <section ref={experienceRef} className="z-20 h-screen snap-start">
+          {isExperienceVisible && <ExperiencePage />}
+        </section>
+        <section ref={ProjectRef} className="z-20 h-screen snap-start">
+          {isProjectVisible && <ProjectPage />}
+        </section>
+        <section ref={contactMeRef} className="z-20 h-screen snap-start">
+          {isContactMeVisible && <ContactMePage/>}
+        </section>
+      </div>
+      <div className="md:hidden block">
       {!isLandingVisible && <div className="absolute fixed top-0 z-30"><Navbar /></div>}
-      {!isLandingVisible && <div className="absolute fixed bottom-0 z-30 text-white md:block hidden"><Social /></div>}
-      <section ref={landingRef} className="z-20 h-screen snap-start">
-        {isLandingVisible && <Landing />}
-      </section>
-      <section ref={aboutPageRef} className="z-20 h-screen snap-start">
-        {isAboutPageVisible && <AboutPage />}
-      </section>
-      <section ref={aboutRef} className="z-20 h-screen snap-start">
-        {isAboutVisible && <About />}
-      </section>
-      <section ref={experienceRef} className="z-20 h-screen snap-start">
-        {isExperienceVisible && <ExperiencePage />}
-      </section>
-      <section ref={ProjectRef} className="z-20 min-h-screen snap-start">
-        {isProjectVisible && <ProjectPage />}
-      </section>
-      <section ref={contactMeRef} className="z-20 h-screen snap-start">
-        {isContactMeVisible && <ContactMePage/>}
-      </section>
+      <div className="z-20"><Landing /></div>
+      <div className="z-20"><AboutPage /></div>
+      <div className="z-20"><About /></div>
+      <div className="z-20"><ExperiencePage /></div>
+      <div className="z-20"><ProjectPage /></div>
+      <div className="z-20"><ContactMePage/></div>
+      </div> 
     </div>
   );
 }
