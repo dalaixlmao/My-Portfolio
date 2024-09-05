@@ -18,7 +18,7 @@ export default function ShortIntro() {
     <div className="text-white flex flex-col md:mt-0">
       <div className="text-sm text-violet-400">Hello Everyone,</div>
       <div className={caveat.className+` text-3xl text-clip font-bold text-nowrap overflow-hidden lg:text-6xl duration-[1000ms] transition-all w-0 z-10 ${fadeIn?"w-full":"w-0"} `}>
-        I'm <a className={caveat.className}>Anubhav Aaryan</a>
+        I&apos;m <a className={caveat.className}>Anubhav Aaryan</a>
       </div>
       <div
         className={`h-1 h-[8px] lg:h-3 mt-[-15px] md:mt-[-20px] lg:mt-[-30px] bg-gradient-to-r from-pink-500/50 to-violet-500/50 transition-all duration-[1000ms] ${
