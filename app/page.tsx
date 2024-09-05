@@ -155,7 +155,7 @@ export default function Home(): JSX.Element {
           <section id={"AboutMobile"} className="z-30">
             <About />
           </section>
-          <section id={"ExperienceMobile"} className="z-20 mt-12">
+          <section id={"ExperienceMobile"} className="z-30">
             <ExperiencePage />
           </section>
           <section id={"ProjectsMobile"} className="z-10">

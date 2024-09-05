@@ -31,6 +31,7 @@ export default function Experience({
         <button
           onClick={() => {
             router.push(companyLink);
+            console.log("clicked");
           }}
           onMouseEnter={() => {
             if (ref.current) ref.current.style.width = "100%";

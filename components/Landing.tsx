@@ -15,12 +15,12 @@ export default function Landing({visible, setIsLandingVisible}:{visible:boolean,
     setTimeout(()=>{
       setIsLandingVisible(false);
       setFadeIn(false);
-    }, 3500)
+    }, 2500)
 
     setTimeout(()=>{
       if(ref.current)
       ref.current.style.display="none";
-    }, 4000)
+    }, 3000)
 
   }, [setIsLandingVisible, setFadeIn]);
   return (
