@@ -7,8 +7,6 @@ import { SiCodeforces } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { IconContext } from "react-icons";
-import SocialButton from "./SocialButton";
 
 export interface NavProps {
   setIsOpen: (a: boolean) => void;
@@ -37,7 +35,7 @@ export default function MobileNav({ setIsOpen, router }: NavProps) {
           <div
             onClick={() => {
               router.push(
-                "https://drive.google.com/file/d/11G-q2iEenxl5PSMlY5mh7EkSiXKdCAUW/view?usp=sharing"
+                "https://drive.google.com/file/d/11cR2rPerVm1lIvbdS1UldwVzzmdK46md/view?usp=drive_link"
               );
             }}
             className=" mt-5 border border-violet-500 text-violet-500 px-3 py-2 rounded-[4px] cursor-pointer hover:border-transparent transition-all hover:bg-violet-800 hover:text-violet-100 "

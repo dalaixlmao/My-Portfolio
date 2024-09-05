@@ -35,7 +35,7 @@ export default function Landing({visible, setIsLandingVisible}:{visible:boolean,
           fadeIn && visible ? "transform translate-x-0" : "-translate-x-[2000px]"
         }`}
       >
-        👋 Hi, this is{" "}
+        👋 Hi, This is{" "}
         <a className=" bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 font-semibold">
           Anubhav
         </a>

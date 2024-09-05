@@ -149,13 +149,13 @@ export default function Home(): JSX.Element {
           />
         </section>
         {!isLandingVisible && <div>
-          <section id={"Default"} className="z-40">
+          <section id={"Default"} className="z-40 h-screen">
             <AboutPage />
           </section>
-          <section id={"AboutMobile"} className="z-30">
+          <section id={"AboutMobile"} className="z-30 mt-24">
             <About />
           </section>
-          <section id={"ExperienceMobile"} className="z-30">
+          <section id={"ExperienceMobile"} className="z-30 mt-96">
             <ExperiencePage />
           </section>
           <section id={"ProjectsMobile"} className="z-10">

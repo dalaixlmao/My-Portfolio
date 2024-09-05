@@ -1,17 +1,24 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Caveat } from "next/font/google";
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function ShortIntro() {
   const [fadeIn, setFadeIn] = useState(false);
   useEffect(() => {
-    setFadeIn(true);
+    setTimeout(()=>{setFadeIn(true);}, 250);
+    
   },[]);
   const router = useRouter();
   return (
     <div className="text-white flex flex-col md:mt-0">
-      <div className="text-sm text-violet-400">Hi, my name is</div>
-      <div className="text-3xl lg:text-6xl font-bold z-10">
-        Anubhav Aaryan
+      <div className="text-sm text-violet-400">Hello Everyone,</div>
+      <div className={caveat.className+` text-3xl text-clip font-bold text-nowrap overflow-hidden lg:text-6xl duration-[1000ms] transition-all w-0 z-10 ${fadeIn?"w-full":"w-0"} `}>
+        I'm <a className={caveat.className}>Anubhav Aaryan</a>
       </div>
       <div
         className={`h-1 h-[8px] lg:h-3 mt-[-15px] md:mt-[-20px] lg:mt-[-30px] bg-gradient-to-r from-pink-500/50 to-violet-500/50 transition-all duration-[1000ms] ${
@@ -19,12 +26,6 @@ export default function ShortIntro() {
         }`}
       ></div>
       <div className="md:text-2xl text-xl font-medium mt-4">Software Developer</div>
-      <div className="text-white/50 mt-4 w-full lg:w-1/2 text-sm font-light">
-        I am an innovative full-stack developer and recent IIT Roorkee graduate
-        with a strong foundation in competitive programming, holding an Expert
-        rating on <a onClick={()=>{router.push("https://codeforces.com/profile/_watch_this_")}} className="cursor-pointer hover:underline transition-all text-violet-400 font-medium">Codeforces (1620)</a> and a Knight rating on{" "}
-        <a onClick={()=>{router.push("https://leetcode.com/u/aaryan4nubhav/")}} className="cursor-pointer hover:underline transition-all text-violet-400 font-medium">Leetcode (1865)</a>.
-      </div>
       <div className="mt-6 flex flex-row transition-all">
         <button onClick={()=>{router.push("mailto:aaryan4nubhav@gmail.com")}} className="text-violet-400 hover:text-white flex transition-all flex-row items-center hover:border-transparent border border-violet-400 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-400 pl-4 pr-4 py-2 rounded-full">
           Say Hello <RightArrow />
