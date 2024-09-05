@@ -79,7 +79,7 @@ export default function Home(): JSX.Element {
       <div className="md:block hidden">
         <CursorArea />
         {!isLandingVisible && (
-          <div className="absolute fixed top-0 z-40">
+          <div className="absolute fixed top-0 z-[100]">
             <Navbar />
           </div>
         )}
