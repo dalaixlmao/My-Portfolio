@@ -54,7 +54,7 @@ export const projects = [
         },
     {
       title:"Codeforces API Visualizer",
-      link:[ "https://github.com/dalaixlmao/Cf-visualizer", "https://cf-viz.vercel.app/"],
+      link:[ "https://github.com/dalaixlmao/cf-viz", "https://cf-viz.vercel.app/"],
       skill: [
         "Node.js",
         "Express.js",
