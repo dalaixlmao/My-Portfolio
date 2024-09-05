@@ -21,7 +21,7 @@ export default function Landing({visible, setIsLandingVisible}:{visible:boolean,
       if(ref.current)
       ref.current.style.display="none";
     }, 3000)
-
+//
   }, [setIsLandingVisible, setFadeIn]);
   return (
     <div
