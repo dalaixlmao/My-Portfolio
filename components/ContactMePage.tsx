@@ -16,7 +16,7 @@ export default function ContactMePage() {
     <Card>
       <div className="md:h-auto flex flex-col items-center h-screen justify-around mt-[2600px] pt-12 md:pt-0 md:mt-36">
         <div className="flex flex-col items-center">
-          <div className="duration-500 hover:bg-clip-text cursor-default transition-all hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500  md:text-6xl text-center text-4xl text-semibold">
+          <div className="duration-500 bg-clip-text hover:text-white cursor-default transition-all text-transparent bg-gradient-to-r from-pink-500 to-violet-500  md:text-6xl text-center text-4xl text-semibold">
             Get In Touch
           </div>
           <div className="text-center text-xs text-violet-100/50 font-light leading-relaxed mt-4 max-w-[550px]">

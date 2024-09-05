@@ -79,7 +79,7 @@ export default function Home(): JSX.Element {
       <div className="md:block hidden">
         <CursorArea />
         {!isLandingVisible && (
-          <div className="absolute fixed top-0 z-[100]">
+          <div className="absolute fixed top-0 z-50">
             <Navbar />
           </div>
         )}
@@ -108,7 +108,7 @@ export default function Home(): JSX.Element {
             <section
               id="About"
               ref={aboutRef}
-              className="z-20 h-screen snap-start"
+              className="z-20 pt-12 h-screen snap-start"
             >
               {isAboutVisible && <About />}
             </section>
