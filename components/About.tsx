@@ -17,7 +17,7 @@ export default function About() {
           className="w-full h-full flex flex-col items-center lg:items-start xl:flex-row text-justify"
         >
           <div className=" w-full text-xs mt-6 md:mt-12 md:pr-9 wrap text-violet-100/50 font-light leading-relaxed">
-            I'm an innovative full-stack developer and a proud graduate of the
+            I&apos;m an innovative full-stack developer and a proud graduate of the
             <a
               onClick={() => {
                 router.push("https://www.iitr.ac.in/");
