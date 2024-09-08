@@ -67,7 +67,7 @@ export default function ContactMePage() {
               </div>
           <div
             onClick={() => {
-              window.open("https://github.com/dalaixlmao", "_blank");
+              window.open("https://github.com/dalaixlmao/My-Portfolio", "_blank");
               router.push("/");
             }}
             className="cursor-pointer mt-1  text-[12px] w-[200px] font-light text-violet-400 flex flex-row justify-between"
