@@ -5,7 +5,6 @@ import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 import Cross from "@/public/Cross";
 import Menu from "@/public/Menu";
-import { NavButtonDesktop, NavButtonMobile } from "./NavButton";
 import Link from "next/link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

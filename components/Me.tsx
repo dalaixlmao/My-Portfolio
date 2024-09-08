@@ -1,8 +1,13 @@
 import { Bangers } from "next/font/google";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { FaLinkedin, FaInstagramSquare, FaWhatsappSquare, FaGithub } from "react-icons/fa";
-import { SiCodeforces, SiLeetcode, SiGmail } from "react-icons/si";
+import {
+  FaLinkedin,
+  FaInstagramSquare,
+  FaWhatsappSquare,
+  FaGithub,
+} from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 const bangers = Bangers({ subsets: ["latin"], weight: ["400"] });
 
@@ -20,7 +25,7 @@ export default function Me() {
   };
   const handleInteraction2 = () => {
     if (ref.current) {
-      ref.current.textContent ="";
+      ref.current.textContent = "";
     }
     setHovered(false);
     console.log("clicked");
@@ -58,17 +63,32 @@ export default function Me() {
             <div className="text-right">Want to connect?</div>
             <div className="flex mt-0 justify-around w-full h-full flex-row">
               <button
-                onClick={() => router.push("https://www.instagram.com/__4nubhav__/")}
+                onClick={() => {
+                  window.open(
+                    "https://www.instagram.com/__4nubhav__/",
+                    "_blank"
+                  );
+                  router.push("/");
+                }}
               >
                 <FaInstagramSquare size={"25"} />
               </button>
               <button
-                onClick={() => router.push("https://www.linkedin.com/in/anubhav-aaryan-099987201/")}
+                onClick={() => {
+                  window.open(
+                    "https://www.linkedin.com/in/anubhav-aaryan-099987201/",
+                    "_blank"
+                  );
+                  router.push("/");
+                }}
               >
                 <FaLinkedin size={"25"} />
               </button>
               <button
-                onClick={() => router.push("mailto:aaryan4nubhav@gmail.com")}
+                onClick={() => {
+                  window.open("mailto:aaryan4nubhav@gmail.com", "_blank");
+                  router.push("/");
+                }}
               >
                 <SiGmail size={"25"} />
               </button>

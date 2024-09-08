@@ -1,5 +1,4 @@
 import { ReactNode, useRef, useState } from "react";
-import { IconType } from "react-icons";
 import { IconContext } from "react-icons";
 import { useRouter } from "next/navigation";
 
@@ -31,7 +30,8 @@ export default function SocialButtonMobile({
           transitionDuration: "150ms",
         }}
         onClick={() => {
-          router.push(link);
+          window.open(link, "_blank");
+          router.push("/");
         }}
         className="flex cursor-pointer flex-row items-center duration-150 transition-all"
         title={title}

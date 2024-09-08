@@ -7,8 +7,6 @@ import { SiCodeforces } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { IconContext } from "react-icons";
-import SocialButton from "./SocialButton"
 
 export default function ContactMePage() {
   const router = useRouter();
@@ -69,7 +67,8 @@ export default function ContactMePage() {
               </div>
           <div
             onClick={() => {
-              router.push("https://github.com/dalaixlmao");
+              window.open("https://github.com/dalaixlmao", "_blank");
+              router.push("/");
             }}
             className="cursor-pointer mt-1  text-[12px] w-[200px] font-light text-violet-400 flex flex-row justify-between"
           >

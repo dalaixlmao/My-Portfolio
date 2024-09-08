@@ -1,7 +1,5 @@
-import { useRef, useState } from "react";
-import Skill from "./Skill";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { linkSync } from "fs";
 import { Space_Mono } from "next/font/google";
 
 const spaceMono = Space_Mono({ subsets:["latin"], weight:["400", "700"]})
@@ -39,14 +37,17 @@ export default function Project({
         <div
         onClick={() => {
           if(!hovered1)
-          router.push(link[0]);
+          {  window.open(link[0], '_blank');
+            router.push("/");
+          }
         }}>
           <Folder />
         </div>
         <div className="flex flex-row" title="Deployed Link">
           {link[1] && <div
           onClick={() => {
-            router.push(link[1]);
+            window.open(link[1], '_blank');
+            router.push("/");
           }}
           onMouseEnter={() => {
             setHovered1(true);
@@ -66,7 +67,8 @@ export default function Project({
             setHovered(false);
           }}
             onClick={() => {
-              router.push(link[0]);
+              window.open(link[0], '_blank');
+              router.push("/");
             }}
             className={"transition-all"}
           >
@@ -77,7 +79,9 @@ export default function Project({
       <div
       onClick={() => {
         if(!hovered1)
-        router.push(link[0]);
+        {window.open(link[0], '_blank');
+          router.push("/");
+        }
       }}
        className="z-10">
         <div className={hoveredAll?"text-violet-400 mt-2 text-sm font-semibold":"text-violet-100 mt-2 text-sm font-semibold"}>{title}</div>

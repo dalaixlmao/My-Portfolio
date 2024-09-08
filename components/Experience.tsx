@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import Skill from "./Skill";
 import { useRouter } from "next/navigation";
 import Bullet from "./Bullet";
 
@@ -31,7 +30,7 @@ export default function Experience({
 
         <button
           onClick={() => {
-            router.push(companyLink);
+            window.open(companyLink, '_blank');
             console.log("clicked");
           }}
           onMouseEnter={() => {

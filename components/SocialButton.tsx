@@ -1,5 +1,4 @@
 import { ReactNode, useRef, useState } from "react";
-import { IconType } from "react-icons";
 import { IconContext } from "react-icons";
 import { useRouter } from "next/navigation";
 
@@ -49,7 +48,9 @@ export default function SocialButton({
           }
         }}
         onClick={() => {
-          router.push(link);
+          window.open(link, "_blank");
+          router.push("/");
+          
         }}
         className={`flex cursor-pointer flex-row items-center duration-150 transition-all ${fade ? "opacity-100" : "opacity-0"}`}
         title={title}

@@ -17,10 +17,12 @@ export default function About() {
           className="w-full h-full flex flex-col items-center lg:items-start xl:flex-row text-justify"
         >
           <div className=" w-full text-xs mt-6 md:mt-12 md:pr-9 wrap text-violet-100/50 font-light leading-relaxed">
-            I&apos;m an innovative full-stack developer and a proud graduate of the
+            I&apos;m an innovative full-stack developer and a proud graduate of
+            the
             <a
               onClick={() => {
-                router.push("https://www.iitr.ac.in/");
+                window.open("https://www.iitr.ac.in/", "_blank");
+                router.push("/");
               }}
               className="hover:underline cursor-pointer transition-all font-semibold text-violet-400"
             >
@@ -35,7 +37,11 @@ export default function About() {
             rating on{" "}
             <a
               onClick={() => {
-                router.push("https://codeforces.com/profile/_watch_this_");
+                window.open(
+                  "https://codeforces.com/profile/_watch_this_",
+                  "_blank"
+                );
+                router.push("/");
               }}
               className="hover:underline cursor-pointer transition-all font-semibold text-violet-400"
             >
@@ -44,7 +50,8 @@ export default function About() {
             and a Knight rating on{" "}
             <a
               onClick={() => {
-                router.push("https://leetcode.com/u/aaryan4nubhav/");
+                window.open("https://leetcode.com/u/aaryan4nubhav/", "_blank");
+                router.push("/");
               }}
               className="hover:underline cursor-pointer transition-all font-semibold text-violet-400"
             >
@@ -55,7 +62,6 @@ export default function About() {
             to craft creative and efficient solutions.
             <div className="font-medium">Skills :</div>
             <div className="flex flex-row justify-between text-justify">
-              
               <div className="flex flex-col bg-blue">
                 <ul className="text-left">
                   <li className="flex flex-row">

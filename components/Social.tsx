@@ -4,7 +4,6 @@ import { SiCodeforces } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { IconContext } from "react-icons";
 import SocialButton from "./SocialButton";
 import { useEffect, useState } from "react";
 

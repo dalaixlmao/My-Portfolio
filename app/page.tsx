@@ -2,7 +2,6 @@
 import { useState, useEffect, useRef, useCallback, RefObject } from "react";
 import Landing from "@/components/Landing";
 import AboutPage from "@/components/AboutPage";
-import Details from "@/components/Details";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import ExperiencePage from "@/components/ExperiencePage";
