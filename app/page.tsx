@@ -9,7 +9,7 @@ import ProjectPage from "../components/ProjectPage";
 import ContactMePage from "@/components/ContactMePage";
 import Social from "@/components/Social";
 import Head from "next/head";
-
+import {Analytics} from "@vercel/analytics/react";
 interface IntersectionOptions {
   root?: Element | null;
   rootMargin?: string;
@@ -165,6 +165,7 @@ export default function Home(): JSX.Element {
           </section>
         </div>}
       </div>
+<Analytics/>
     </div>
   );
 }
