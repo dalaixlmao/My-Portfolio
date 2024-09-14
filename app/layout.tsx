@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Anubhav Aaryan's Portfolio",
   description: "Hi, I am Anubhav Aaryan.",
   icons: {
-    icon: "../public/fav.ico",
+    icon: "../public/fav.svg",
   },
 };
 
