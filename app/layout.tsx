@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
   title: "Anubhav Aaryan's Portfolio",
   description: "Hi, I am Anubhav Aaryan.",
   icons: {
-    icon: "../public/fav.svg",
+    icon: "/fav.svg",
   },
 };
 
@@ -24,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className={poppins.className + " overflow-hidden"}>{children}</body>
     </html>
   );
