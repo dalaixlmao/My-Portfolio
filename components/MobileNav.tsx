@@ -35,8 +35,8 @@ export default function MobileNav({ setIsOpen, router }: NavProps) {
           <div
             onClick={() => {
               window.open(
-                "https://drive.google.com/file/d/11cR2rPerVm1lIvbdS1UldwVzzmdK46md/view?usp=drive_link"
-              , "_blanl");
+                "https://bit.ly/3BgsrVX"
+              , "_blank");
               router.push("/");
             }}
             className=" mt-5 border border-violet-500 text-violet-500 px-3 py-2 rounded-[4px] cursor-pointer hover:border-transparent transition-all hover:bg-violet-800 hover:text-violet-100 "
