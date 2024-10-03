@@ -7,6 +7,7 @@ import { SiCodeforces } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import { codeforces, github, gmail, instagram, leetcode, linkedin, resume } from "@/store/links";
 
 export interface NavProps {
   setIsOpen: (a: boolean) => void;
@@ -35,7 +36,7 @@ export default function MobileNav({ setIsOpen, router }: NavProps) {
           <div
             onClick={() => {
               window.open(
-                "https://bit.ly/3BgsrVX"
+                resume
               , "_blank");
               router.push("/");
             }}
@@ -52,32 +53,32 @@ export default function MobileNav({ setIsOpen, router }: NavProps) {
               <div className="flex flex-row w-full justify-around">
                 <SocialButtonMobile
                   button={<FaInstagram />}
-                  link="https://www.instagram.com/__4nubhav__/"
+                  link={instagram}
                   title={"Instagram"}
                 />
                 <SocialButtonMobile
                   button={<FaLinkedin />}
-                  link="https://www.linkedin.com/in/anubhav-aaryan-099987201/"
+                  link={linkedin}
                   title={"Linkedin"}
                 />
                 <SocialButtonMobile
                   button={<SiCodeforces />}
-                  link="https://codeforces.com/profile/_watch_this_"
+                  link={codeforces}
                   title={"Codeforces"}
                 />
                 <SocialButtonMobile
                   button={<SiLeetcode />}
-                  link="https://leetcode.com/u/aaryan4nubhav/"
+                  link={leetcode}
                   title={"Leetcode"}
                 />
                 <SocialButtonMobile
                   button={<FaGithub />}
-                  link="https://github.com/dalaixlmao"
+                  link={github}
                   title={"Github"}
                 />
                 <SocialButtonMobile
                   button={<SiGmail />}
-                  link="mailto:aaryan4nubhav@gmail.com"
+                  link={gmail}
                   title={"Gmail"}
                 />
               </div>

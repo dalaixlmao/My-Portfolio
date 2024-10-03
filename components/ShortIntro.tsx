@@ -1,6 +1,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Caveat } from "next/font/google";
+import { gmail } from "@/store/links";
 
 const caveat = Caveat({
   subsets: ["latin"],
@@ -27,7 +28,7 @@ export default function ShortIntro() {
       ></div>
       <div className="md:text-2xl text-xl font-medium mt-4">Software Developer</div>
       <div className="mt-6 flex flex-row transition-all">
-        <button onClick={()=>{window.open("mailto:aaryan4nubhav@gmail.com", "_blank");router.push("/")}} className="text-violet-400 hover:text-white flex transition-all flex-row items-center hover:border-transparent border border-violet-400 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-400 pl-4 pr-4 py-2 rounded-full">
+        <button onClick={()=>{window.open(gmail, "_blank");router.push("/")}} className="text-violet-400 hover:text-white flex transition-all flex-row items-center hover:border-transparent border border-violet-400 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-400 pl-4 pr-4 py-2 rounded-full">
           Say Hello <RightArrow />
         </button>
       </div>

@@ -3,6 +3,7 @@ import Me from "./Me";
 import Headers from "./Headers";
 import { useRouter } from "next/navigation";
 import Bullet from "./Bullet";
+import { codeforces, iitr, leetcode } from "@/store/links";
 
 export default function About() {
   const router = useRouter();
@@ -21,7 +22,7 @@ export default function About() {
             the
             <a
               onClick={() => {
-                window.open("https://www.iitr.ac.in/", "_blank");
+                window.open(iitr, "_blank");
                 router.push("/");
               }}
               className="hover:underline cursor-pointer transition-all font-semibold text-violet-400"
@@ -38,7 +39,7 @@ export default function About() {
             <a
               onClick={() => {
                 window.open(
-                  "https://codeforces.com/profile/_watch_this_",
+                  codeforces,
                   "_blank"
                 );
                 router.push("/");
@@ -50,7 +51,7 @@ export default function About() {
             and a Knight rating on{" "}
             <a
               onClick={() => {
-                window.open("https://leetcode.com/u/aaryan4nubhav/", "_blank");
+                window.open(leetcode, "_blank");
                 router.push("/");
               }}
               className="hover:underline cursor-pointer transition-all font-semibold text-violet-400"

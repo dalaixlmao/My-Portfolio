@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect, MutableRefObject } from "react";
-import { RefObject } from "react";
+import { useRef, useState, useEffect} from "react";
 
 export default function Landing({visible, setIsLandingVisible}:{visible:boolean, setIsLandingVisible:(a:boolean)=>void}) {
   const [fadeIn, setFadeIn] = useState(false);

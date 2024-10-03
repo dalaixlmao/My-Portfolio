@@ -7,6 +7,7 @@ import { SiCodeforces } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import { codeforces, github, gmail, instagram, leetcode, linkedin } from "@/store/links";
 
 export default function ContactMePage() {
   const router = useRouter();
@@ -24,7 +25,7 @@ export default function ContactMePage() {
           </div>
           <button
             onClick={() => {
-              router.push("mailto:aaryan4nubhav@gmail.com");
+              router.push(gmail);
             }}
             className="duration-250 hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 hover:border-transparent border py-3 px-5 mt-8 rounded-md text-violet-600 border-violet-600 hover:text-white hover:bg-violet-600 hover:font-medium transition-all"
           >
@@ -36,32 +37,32 @@ export default function ContactMePage() {
         <div className="md:hidden block flex flex-row w-full justify-around pb-1 border-b border-white/10">
                 <SocialButtonMobile
                   button={<FaInstagram />}
-                  link="https://www.instagram.com/__4nubhav__/"
+                  link={instagram}
                   title={"Instagram"}
                 />
                 <SocialButtonMobile
                   button={<FaLinkedin />}
-                  link="https://www.linkedin.com/in/anubhav-aaryan-099987201/"
+                  link={linkedin}
                   title={"Linkedin"}
                 />
                 <SocialButtonMobile
                   button={<SiCodeforces />}
-                  link="https://codeforces.com/profile/_watch_this_"
+                  link={codeforces}
                   title={"Codeforces"}
                 />
                 <SocialButtonMobile
                   button={<SiLeetcode />}
-                  link="https://leetcode.com/u/aaryan4nubhav/"
+                  link={leetcode}
                   title={"Leetcode"}
                 />
                 <SocialButtonMobile
                   button={<FaGithub />}
-                  link="https://github.com/dalaixlmao"
+                  link={github}
                   title={"Github"}
                 />
                 <SocialButtonMobile
                   button={<SiGmail />}
-                  link="mailto:aaryan4nubhav@gmail.com"
+                  link={gmail}
                   title={"Gmail"}
                 />
               </div>

@@ -8,6 +8,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import { gmail, instagram, linkedin } from "@/store/links";
 
 const bangers = Bangers({ subsets: ["latin"], weight: ["400"] });
 
@@ -65,7 +66,7 @@ export default function Me() {
               <button
                 onClick={() => {
                   window.open(
-                    "https://www.instagram.com/__4nubhav__/",
+                    instagram,
                     "_blank"
                   );
                   router.push("/");
@@ -76,7 +77,7 @@ export default function Me() {
               <button
                 onClick={() => {
                   window.open(
-                    "https://www.linkedin.com/in/anubhav-aaryan-099987201/",
+                    linkedin,
                     "_blank"
                   );
                   router.push("/");
@@ -86,7 +87,7 @@ export default function Me() {
               </button>
               <button
                 onClick={() => {
-                  window.open("mailto:aaryan4nubhav@gmail.com", "_blank");
+                  window.open(gmail, "_blank");
                   router.push("/");
                 }}
               >
