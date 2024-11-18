@@ -1,5 +1,20 @@
 export const projects = [
   {
+    title: "Filter Mate",
+    link: ["https://github.com/dalaixlmao/Filter-mate", "https://filter-mate.vercel.app/"],
+    skill: [
+      "Next.js",
+      "Redux Toolkit",
+      "Axios",
+      "TailwindCSS",
+      "TypeScript",
+    ],
+    posterLink:
+      "https://repository-images.githubusercontent.com/363009543/e049ba80-ab25-11eb-8112-78ae862803a0",
+    description:
+      "Developed a filtering application allowing users to filter items by parameters, import/export configurations, and download custom filters.",
+  },
+  {
     skill: [
       "Next.js",
       "Node.js",
@@ -80,20 +95,5 @@ export const projects = [
       "https://scontent.xx.fbcdn.net/v/t1.15752-9/455635130_517746877297013_8546318818708104287_n.png?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9q8YpUEFZzgQ7kNvgF_03l5&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QEFwY9ot-_b16g3yQiTVOHvXPW_PM1nxZZk9sYKiTRwSg&oe=66F679A4",
     description:
       "ByteShell is a simple shell implementation written in C language. It provides a basic command-line interface where users can enter commands, execute built-in commands, and view command history.",
-  },
-  {
-    title: "Filter Mate",
-    link: ["https://github.com/dalaixlmao/Filter-mate", "https://filter-mate.vercel.app/"],
-    skill: [
-      "Next.js",
-      "Redux Toolkit",
-      "Axios",
-      "TailwindCSS",
-      "TypeScript",
-    ],
-    posterLink:
-      "https://repository-images.githubusercontent.com/363009543/e049ba80-ab25-11eb-8112-78ae862803a0",
-    description:
-      "Developed a filtering application allowing users to filter items by parameters, import/export configurations, and download custom filters.",
   },
 ];
