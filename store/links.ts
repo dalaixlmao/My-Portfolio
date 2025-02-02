@@ -1,4 +1,4 @@
-const resume = "https://bit.ly/4azvi9J";
+const resume = "https://bit.ly/40FiDOa";
 const instagram = "https://www.instagram.com/__4nubhav__/";
 const linkedin = "https://www.linkedin.com/in/anubhav-aaryan-099987201/";
 const codeforces = "https://codeforces.com/profile/_watch_this_";
